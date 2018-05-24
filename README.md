@@ -1,7 +1,7 @@
 # Overview: Ansible_aws_infra
 
 
-BCP is a necessary approach for all organization. Before using this playbook kindly check have we can take snapshot of ec2 [SNAPSHOT](https://github.com/Sunil777/AWS_EC2_SNAPSHOT/)
+BCP is a necessary approach for all organization. Before using this playbook kindly check Snapshot process of EC2[SNAPSHOT](https://github.com/Sunil777/AWS_EC2_SNAPSHOT/).
 - - - -
 # Usage
 
