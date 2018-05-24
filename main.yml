@@ -1,0 +1,3 @@
+- hosts: localost
+  roles:
+    - snapshot-server
