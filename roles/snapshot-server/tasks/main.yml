@@ -80,7 +80,7 @@
          Expireyear: "{{ expday }}"
          substack: "{{ stack }}"
          Stack: Web
-         Project: Payubiz
+         Project: AWS
          requested_by: aws
     with_items: "{{vpc_subnet_id}}"     
     register: ec2
