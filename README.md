@@ -14,18 +14,11 @@ Ansible version
 
         >= 2.2.0.0
 
-Match a set of tags exactly and get the returned instance(s)
+How we can execute this playbook
 
-        ansible-playbook playbook.yml -e cli_env=prod -e cli_roles=app,web,db
+        ansible-playbook main.yml --extra-vars 'host=localhost INCREMENTAL=daily PORT=$SSH_PORT ec2_assign_public_ip=no  USER=$USER  PASSWD=******** ec2_count=1 ec2_sg_id=$SG_ID   elb_name=$ELB_NAME  ec2_monitoring=yes subnet1=$1 subnet2=$2  stack=$STACK region=ap-south-1 ec2_key_name=$KEY_NAME ec2_instance_type=c5.large server=$STACK env=prod expday=3'
 
-Glob all boxes with role of `web` somewhere in the list and get the returned instance(s). This is where this method gets weird and you can potentially match too many boxes. **Be careful**. Always run with --list-hosts first.
 
-        ansible-playbook playbook.yml -e cli_env=prod -e cli_roles=*web* --list-hosts
-        ansible-playbook playbook.yml -e cli_env=prod -e cli_roles=*web*
-
-Glob all boxes with role of `jenkins*` and get the returned instance(s)
-
-        ansible-playbook playbook.yml -e cli_env=prod -e cli_role=jenkins*
 
 I hope you can see where this is going.
 
