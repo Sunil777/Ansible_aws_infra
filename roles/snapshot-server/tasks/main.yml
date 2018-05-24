@@ -81,7 +81,7 @@
          substack: "{{ stack }}"
          Stack: Web
          Project: Payubiz
-         requested_by: Neeraj_Chauhan
+         requested_by: aws
     with_items: "{{vpc_subnet_id}}"     
     register: ec2
 
